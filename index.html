@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decodificador de texto</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body style="margin: 0; padding: 0">
+    <div
+      style="
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: row;
+        background-color: lightblue;
+      "
+    >
+      <!--Início coluna esquerda-->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          flex: 2;
+          /* border: 6px solid black; */
+        "
+      >
+        <!--Início logo-->
+        <div>
+          <img src="assets/logo.svg" alt="logo-alura" />
+        </div>
+        <!--FIM logo-->
+
+        <!--Início INPUT-->
+        <div
+          style="
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            background-color: rgb(64, 127, 82);
+          "
+        >
+          <textarea
+            class="caixa-input"
+            id="texto"
+            name="texto"
+            placeholder="Digite seu texto"
+            rows="4"
+            cols="50"
+          >
+asdasdasdsad</textarea
+          >
+        </div>
+        <!-- Fim INPUT -->
+
+        <!-- Início BUTTON -->
+        <div style="display: flex; flex-direction: column">
+          <div style="display: flex; justify-content: center">
+            <img src="assets/exclamacao.png" alt="imagem-exclamacao" />
+            <p>Apenas letras mínusculas e sem acento.</p>
+          </div>
+
+          <div style="display: flex; justify-content: center">
+            <button>Criptografar</button>
+            <button>Descriptografar</button>
+          </div>
+        </div>
+        <!-- Fim BUTTON -->
+
+        <!--Início FOOTER-->
+        <div style="display: flex; justify-content: center">
+          <p>Desenvolvido por Eliane Orlandin</p>
+        </div>
+        <!--FIM FOOTER-->
+      </div>
+      <!--Fim coluna esquerda-->
+
+      <!--Início coluna direita-->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          /* background-color: white; */
+          border-radius: 32px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-right: 10px;
+          padding: 15px;
+          background-color: green;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: brown;
+          "
+        >
+          <img
+            class="imagem-menina"
+            src="./assets/imagem-menina.png"
+            alt="imagem-menina"
+            style="width: 100%; height: auto"
+          />
+          <p class="paragrafo-um">Nenhuma mensagem encontrada</p>
+          <p class="paragrafo-dois">
+            Digite um texto que você deseja criptografar ou descriptografar.
+          </p>
+        </div>
+        <button>Copiar</button>
+      </div>
+      <!--Fim coluna direita-->
+    </div>
+  </body>
+</html>
