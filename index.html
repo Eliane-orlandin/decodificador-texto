@@ -6,6 +6,12 @@
     <title>Decodificador de texto</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body style="margin: 0; padding: 0">
     <div
@@ -14,7 +20,7 @@
         height: 100vh;
         width: 100vw;
         flex-direction: row;
-        background-color: lightblue;
+        background-color: #f3f5fc;
       "
     >
       <!--Início coluna esquerda-->
@@ -23,12 +29,16 @@
           display: flex;
           flex-direction: column;
           flex: 2;
-          /* border: 6px solid black; */
+          /* border: 0.38rem solid black; */
         "
       >
         <!--Início logo-->
         <div>
-          <img src="assets/logo.svg" alt="logo-alura" />
+          <img
+            style="margin-top: 2.5rem; margin-left: 2.5rem"
+            src="assets/logo.svg"
+            alt="logo-alura"
+          />
         </div>
         <!--FIM logo-->
 
@@ -40,7 +50,7 @@
             flex-direction: column;
             /* justify-content: center; */
             align-items: center;
-            background-color: rgb(64, 127, 82);
+            background-color: #f3f5fc;
           "
         >
           <textarea
@@ -48,31 +58,86 @@
             id="texto"
             name="texto"
             placeholder="Digite seu texto"
-            rows="4"
-            cols="50"
-          >
-asdasdasdsad</textarea
-          >
+            rows="10"
+            cols="45"
+            ;
+            style="
+              display: flex;
+              font-family: Inter, sans-serif;
+              font-size: 2rem;
+              background-color: #f3f5fc;
+              color: #0a3871;
+              margin: 3.8rem;
+              border: none;
+              outline: none;
+              padding-left: 10%;
+            "
+          ></textarea>
         </div>
         <!-- Fim INPUT -->
 
         <!-- Início BUTTON -->
         <div style="display: flex; flex-direction: column">
-          <div style="display: flex; justify-content: center">
-            <img src="assets/exclamacao.png" alt="imagem-exclamacao" />
+          <div
+            style="
+              display: flex;
+              justify-content: left;
+              font-family: Inter;
+              font-size: 0.8rem;
+              color: #495057;
+              margin-left: 15%;
+            "
+          >
+            <img src="assets/exclamacao.svg" alt="imagem-exclamacao" />
             <p>Apenas letras mínusculas e sem acento.</p>
           </div>
 
-          <div style="display: flex; justify-content: center">
-            <button>Criptografar</button>
-            <button>Descriptografar</button>
+          <div style="display: flex; justify-content: center; gap: 30px">
+            <button
+              style="
+                background-color: #0a3871;
+                color: white;
+                font-family: Inter;
+                font-size: 1rem;
+                border-radius: 1.5rem;
+                border-style: hidden;
+                width: 20.5rem;
+                height: 4.2rem;
+              "
+            >
+              Criptografar
+            </button>
+            <button
+              style="
+                background-color: #d8dfe8;
+                color: #0a3871;
+                font-family: Inter;
+                font-size: 1rem;
+                border-radius: 1.5rem;
+                /* border-color: #0a3871; */
+                border-style: hidden;
+                width: 20.5rem;
+                height: 4.2rem;
+              "
+            >
+              Descriptografar
+            </button>
           </div>
         </div>
         <!-- Fim BUTTON -->
 
         <!--Início FOOTER-->
-        <div style="display: flex; justify-content: center">
-          <p>Desenvolvido por Eliane Orlandin</p>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            font-family: Inter;
+            font-size: 0.8rem;
+            color: #495057;
+            padding: 2%;
+          "
+        >
+          <p>Desenvolvido por Eliane Orlandin &reg;</p>
         </div>
         <!--FIM FOOTER-->
       </div>
@@ -84,12 +149,13 @@ asdasdasdsad</textarea
           display: flex;
           flex-direction: column;
           /* background-color: white; */
-          border-radius: 32px;
-          margin-top: 10px;
-          margin-bottom: 10px;
-          margin-right: 10px;
-          padding: 15px;
-          background-color: green;
+          border-radius: 2rem;
+          margin-top: 2.5rem;
+          margin-bottom: 2.5rem;
+          margin-right: 2.5rem;
+          padding: 1rem;
+          background-color: white;
+          box-shadow: 0.3rem 0.3rem 0.6rem #c7c5c5;
         "
       >
         <div
@@ -99,21 +165,61 @@ asdasdasdsad</textarea
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: brown;
+            background-color: white;
           "
         >
           <img
             class="imagem-menina"
             src="./assets/imagem-menina.png"
             alt="imagem-menina"
-            style="width: 100%; height: auto"
+            style="max-width: 100%; height: auto"
           />
-          <p class="paragrafo-um">Nenhuma mensagem encontrada</p>
-          <p class="paragrafo-dois">
+          <p
+            style="
+              font-family: Inter, sans-serif;
+              font-size: 1.6rem;
+              font-weight: bold;
+              color: #343a40;
+              margin: 1rem;
+              text-align: center;
+            "
+            class="paragrafo-um"
+          >
+            Nenhuma mensagem encontrada
+          </p>
+          <p
+            style="
+              font-family: Inter, sans-serif;
+              font-size: 1rem;
+              font-weight: regular;
+              color: #343a40;
+              margin: 1rem;
+              text-align: center;
+            "
+            class="paragrafo-dois"
+          >
             Digite um texto que você deseja criptografar ou descriptografar.
           </p>
         </div>
-        <button>Copiar</button>
+        <button
+          style="
+            display: flex;
+            background-color: #0a3871;
+            color: white;
+            font-family: Inter;
+            font-size: 1rem;
+            border-radius: 1.5rem;
+            border-style: hidden;
+            width: 20.5rem;
+            height: 4.2rem;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.4rem;
+            margin-left: 2%;
+          "
+        >
+          Copiar
+        </button>
       </div>
       <!--Fim coluna direita-->
     </div>
