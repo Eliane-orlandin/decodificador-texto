@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+/* .hidden {
+  display: none;
+} */
+
 .conteiner {
   display: flex;
   height: 100vh;
@@ -120,6 +124,13 @@
   margin: 1rem;
   text-align: center;
 }
+.conteiner__direito__texto__exibido {
+  color: #0a3871;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  width: 100%;
+  height: auto;
+}
 .conteiner__esquerdo__botao__copiar {
   display: flex;
   background-color: #0a3871;
@@ -134,4 +145,5 @@
   align-items: center;
   margin-bottom: 1.4rem;
   margin-left: 2%;
+  visibility: hidden;
 }
