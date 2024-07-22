@@ -60,6 +60,9 @@ body {
   width: 20.5rem;
   height: 4.2rem;
 }
+.coluna__2__botao__criptografar:hover {
+  background-color: #224b7e;
+}
 .coluna__2__botao__descriptografar {
   background-color: #f3f5fc;
   color: #0a3871;
@@ -69,6 +72,9 @@ body {
   border-radius: 1.5rem;
   width: 20.5rem;
   height: 4.2rem;
+}
+.coluna__2__botao__descriptografar:hover {
+  background-color: #dde2f4;
 }
 
 .coluna__3 {
@@ -114,6 +120,9 @@ body {
   width: 20.5rem;
   height: 4.2rem;
   visibility: hidden;
+}
+.coluna__3__botao:hover {
+  background-color: #dde2f4;
 }
 .coluna__3__texto__exibido {
   color: #0a3871;
