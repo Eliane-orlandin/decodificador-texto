@@ -14,71 +14,65 @@
     />
   </head>
   <body>
-    <div class="conteiner">
-      <div class="conteiner__esquerdo">
-        <div>
-          <img
-            class="conteiner__esquerdo__logo"
-            src="assets/logo.svg"
-            alt="logo-alura"
-          />
+    <main>
+      <div class="container">
+        <div class="coluna__1">
+          <img src="assets/logo.svg" alt="logo-alura" />
         </div>
 
-        <div class="conteiner__esquerdo__area__texto">
-          <textarea
-            class="conteiner__esquerdo__caixa"
-            id="texto"
-            name="texto"
-            placeholder="Digite seu texto"
-            rows="10"
-            cols="45"
-          ></textarea>
-        </div>
-
-        <div class="conteiner__esquerdo__mensagem">
-          <div class="conteiner__esquerdo__mensagem__alerta">
-            <img src="assets/exclamacao.svg" alt="imagem-exclamacao" />
-            <p>Apenas letras mínusculas e sem acento.</p>
+        <div class="coluna__2">
+          <div>
+            <textarea
+              class="coluna__2__area__texto"
+              id="texto"
+              name="texto"
+              placeholder="Digite seu texto"
+              rows="14"
+              cols="25"
+            ></textarea>
           </div>
 
-          <div class="conteiner__esquerdo__area__botao">
-            <button
-              id="botao-crip"
-              class="conteiner__esquerdo__area__botao__criptografar"
-            >
-              Criptografar
-            </button>
-            <button
-              id="botao-descrip"
-              class="conteiner__esquerdo__area__botao__descriptografar"
-            >
-              Descriptografar
-            </button>
+          <div>
+            <div class="coluna__2__alerta">
+              <img src="assets/exclamacao.svg" alt="imagem-exclamacao" />
+              <p>Apenas letras mínusculas e sem acento.</p>
+            </div>
+
+            <div class="coluna__2__area__botao">
+              <button class="coluna__2__botao__criptografar" id="botao-crip">
+                Criptografar
+              </button>
+              <button
+                class="coluna__2__botao__descriptografar"
+                id="botao-descrip"
+              >
+                Descriptografar
+              </button>
+            </div>
           </div>
         </div>
 
-        <div class="conteiner__esquerdo__footer">
-          <p>Desenvolvido por Eliane Orlandin - 2024 &reg;</p>
+        <div class="coluna__3">
+          <div id="caixa-texto" class="coluna__3__container">
+            <img
+              class="coluna__3__imagem"
+              src="./assets/foto-menina.svg"
+              alt="imagem-menina"
+            />
+            <p class="coluna__3__titulo">Nenhuma mensagem encontrada</p>
+            <p class="coluna__3__paragrafo">
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </div>
+          <div>
+            <button class="coluna__3__botao" id="botao-copiar">Copiar</button>
+          </div>
         </div>
       </div>
-
-      <div class="conteiner__direito">
-        <div class="conteiner__direito__area" id="caixa-texto">
-          <img
-            class="conteiner__direito__imagem"
-            src="./assets/foto-menina.svg"
-            alt="imagem-menina"
-          />
-          <p class="conteiner__direito__titulo">Nenhuma mensagem encontrada</p>
-          <p class="conteiner__direito__paragrafo">
-            Digite um texto que você deseja criptografar ou descriptografar.
-          </p>
-        </div>
-        <button id="botao-copiar" class="conteiner__esquerdo__botao__copiar">
-          Copiar
-        </button>
-      </div>
-    </div>
+    </main>
+    <footer>
+      <p>Desenvolvido por Eliane Orlandin - 2024 &reg;</p>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>

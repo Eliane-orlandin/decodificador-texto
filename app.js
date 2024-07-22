@@ -36,7 +36,7 @@ function exibeTexto(texto) {
   }
   let elementoTexto = document.createElement("p");
   elementoTexto.innerText = texto;
-  elementoTexto.classList.add("conteiner__direito__texto__exibido");
+  elementoTexto.classList.add("coluna__3__texto__exibido");
   caixa.appendChild(elementoTexto);
 }
 
@@ -78,4 +78,5 @@ document.getElementById("botao-copiar").addEventListener("click", () => {
 
   copiarTextoDoBotao(textoParaCopiar);
   caixaTexto.innerText = "";
+  // caixaTexto.classList.add("container__direito__texto__mensagem");
 });
