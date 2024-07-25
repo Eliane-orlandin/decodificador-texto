@@ -42,7 +42,6 @@ function exibeTexto(texto) {
 
 document.getElementById("botao-crip").addEventListener("click", (evt) => {
   const textarea = document.getElementById("texto");
-  console.log("Botão Criptografar clicado");
 
   if (textarea.value === "") {
     console.error("Texto não foi informado");
@@ -65,6 +64,7 @@ document.getElementById("botao-descrip").addEventListener("click", (evt) => {
 
   const textoDescriptografado = descriptografarMensagem(textarea.value);
   exibeTexto(textoDescriptografado);
+  textarea.value = "";
 });
 
 document.getElementById("botao-copiar").addEventListener("click", () => {

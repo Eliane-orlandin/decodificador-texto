@@ -4,17 +4,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+html,
 body {
-  box-sizing: border-box;
+  height: 100%;
+}
+body {
   background-color: #f3f5fc;
   height: auto;
-  width: 100%;
 }
 .container {
   display: flex;
   flex-direction: row;
-  /* height: 60.8rem; */
-  height: auto;
+  height: 59.4rem;
+  width: 100%;
 }
 .coluna__1 {
   flex-basis: 12.5rem;
@@ -22,7 +24,7 @@ body {
 }
 .coluna__2 {
   display: flex;
-  flex-basis: 47.5rem;
+  flex-basis: 45.5rem;
   padding: 2.5rem;
   justify-content: space-between;
   flex-direction: column;
@@ -31,17 +33,46 @@ body {
   width: 100%;
   font-family: Inter, sans-serif;
   font-size: 2rem;
+  font-weight: 400;
+  text-align: left;
   background-color: #f3f5fc;
   color: #0a3871;
   border: none;
   padding-top: 8rem;
   outline: none;
+  line-height: 48px;
+}
+::-webkit-input-placeholder {
+  color: #0a3871;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+}
+::-moz-placeholder {
+  color: #0a3871;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #0a3871;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+}
+::-ms-input-placeholder {
+  color: #0a3871;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+}
+::placeholder {
+  color: #0a3871;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
 }
 .coluna__2__alerta {
   display: flex;
   flex-direction: row;
   gap: 2%;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.7rem;
   font-family: Inter;
   font-size: 0.8rem;
   color: #495057;
@@ -65,11 +96,11 @@ body {
   background-color: #224b7e;
 }
 .coluna__2__botao__descriptografar {
-  background-color: #f3f5fc;
+  background-color: #d8dfe8;
   color: #0a3871;
+  border: 1px solid #0a3871;
   font-family: Inter;
   font-size: 1rem;
-  border-color: #0a3871;
   border-radius: 1.5rem;
   width: 20.5rem;
   height: 4.2rem;
@@ -80,19 +111,20 @@ body {
 
 .coluna__3 {
   display: flex;
-  flex-basis: 30rem;
-  padding: 2.5rem 2.5rem 1.2rem 2.5rem;
+  flex-basis: 29.1rem;
+  padding: 2.5rem 2.5rem 01rem 2.5rem;
   justify-content: space-between;
   flex-direction: column;
-  margin: 2.5rem 2.5rem 1.5rem 2.5rem;
+  margin: 20px 30px 0px 0;
   background-color: #ffffff;
   border-radius: 1.5rem;
   box-shadow: 0rem 0.3rem 0.6rem #c7c5c5;
+  /* margin: 10px; */
 }
 .coluna__3__container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 100%;
 }
 
@@ -111,12 +143,16 @@ body {
   margin: 1rem;
   text-align: center;
 }
+.coluna__3__area__botao {
+  display: flex;
+  justify-content: center;
+}
 .coluna__3__botao {
   background-color: #ffffff;
   color: #0a3871;
   font-family: Inter;
   font-size: 1rem;
-  border-color: #0a3871;
+  border: 1px solid #0a3871;
   border-radius: 1.5rem;
   width: 20.5rem;
   height: 4.2rem;
@@ -126,12 +162,19 @@ body {
   background-color: #dde2f4;
 }
 .coluna__3__texto__exibido {
-  color: #0a3871;
+  color: #495057;
   font-family: "Inter", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  text-align: left;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: left;
   width: 100%;
   height: auto;
   flex: 1;
+  overflow-y: auto;
+  max-height: 700px;
+  max-width: 370px;
 }
 footer {
   display: flex;
@@ -144,30 +187,26 @@ footer {
 
 @media (max-width: 769px) {
   .container {
-    display: flex;
     flex-direction: column;
     height: auto;
   }
   .coluna__1 {
     padding: 0;
     flex-basis: auto;
-    margin-top: 30px;
+    margin-top: 1.9rem;
   }
   .coluna__2__area__texto {
     padding-top: 0;
+    line-height: 40px;
   }
   .coluna__3 {
-    display: flex;
     flex-basis: auto;
     flex-direction: column;
-    background-color: #ffffff;
-    border-radius: 1.5rem;
-    box-shadow: 0rem 0.3rem 0.6rem #c7c5c5;
-    /* margin-top: 2.5rem; */
     width: 43rem;
-    height: 16rem;
+    height: 18rem;
     margin-top: 0;
-    padding: 23px;
+    margin-left: 37px;
+    padding: 1.4rem;
   }
   .coluna__3__container {
     width: 100%;
@@ -180,14 +219,101 @@ footer {
   .coluna__3__area__botao {
     display: flex;
     justify-content: center;
-    padding-top: 8px;
+    padding-top: 0.5rem;
   }
   .coluna__3__texto__exibido {
-    color: #0a3871;
-    font-family: "Inter", sans-serif;
-    font-size: 1.6rem;
-    max-height: 150px;
+    max-height: 9.4rem;
+    max-width: 900px;
     overflow-y: scroll;
     flex: 1;
+  }
+}
+@media (max-width: 376px) {
+  .coluna__1 {
+    margin: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .coluna__1__imagem {
+    width: 100px;
+    height: 30px;
+  }
+  .coluna__2 {
+    box-sizing: border-box;
+    flex-basis: auto;
+  }
+  .coluna__2__area {
+    max-height: 15.6rem;
+  }
+  .coluna__2__area__texto {
+    max-height: 15.6rem;
+    font-size: 1.1rem;
+    line-height: 24px;
+  }
+  ::-webkit-input-placeholder {
+    color: #0a3871;
+    font-size: 1.3rem;
+    font-family: "Inter", sans-serif;
+  }
+  ::-moz-placeholder {
+    color: #0a3871;
+    font-size: 1.3rem;
+    font-family: "Inter", sans-serif;
+    opacity: 1;
+  }
+  :-ms-input-placeholder {
+    color: #0a3871;
+    font-size: 1.3rem;
+    font-family: "Inter", sans-serif;
+  }
+  ::-ms-input-placeholder {
+    color: #0a3871;
+    font-size: 1.3rem;
+    font-family: "Inter", sans-serif;
+  }
+  ::placeholder {
+    color: #0a3871;
+    font-size: 1.3rem;
+    font-family: "Inter", sans-serif;
+  }
+  .coluna__2__area__botao {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .coluna__2__botao__criptografar {
+    width: 18.4rem;
+    height: 3.5rem;
+  }
+  .coluna__2__botao__descriptografar {
+    width: 18.4rem;
+    height: 3.5rem;
+  }
+  .coluna__3 {
+    flex-basis: auto;
+    width: 21rem;
+    margin: 1.3rem;
+    box-sizing: border-box;
+  }
+  .coluna__3__container {
+    width: 18.1rem;
+    align-items: center;
+  }
+  .coluna__3__titulo {
+    font-size: 1.2rem;
+  }
+  .coluna__3__paragrafo {
+    font-size: 0.9rem;
+  }
+  .coluna__3__texto__exibido {
+    font-size: 1rem;
+    overflow: auto scroll;
+    line-height: 24px;
+  }
+  .coluna__3__botao {
+    width: 18.4rem;
+    height: 3.5rem;
+  }
+  footer {
+    padding-top: 0;
   }
 }
