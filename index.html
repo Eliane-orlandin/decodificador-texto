@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aplicação para criptografar e descriptografar textos"
+    />
+    <title>Decodificador de texto</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="coluna__1">
+          <img
+            class="coluna__1__imagem"
+            src="assets/logo.svg"
+            alt="logo-alura"
+          />
+        </div>
+
+        <div class="coluna__2">
+          <div class="coluna__2__area">
+            <textarea
+              class="coluna__2__area__texto"
+              id="texto"
+              name="texto"
+              placeholder="Digite seu texto"
+              rows="14"
+              cols="25"
+            ></textarea>
+          </div>
+
+          <div class="coluna__2__area__mensagem">
+            <div class="coluna__2__alerta">
+              <img src="assets/exclamacao.svg" alt="imagem-exclamacao" />
+              <p>Apenas letras mínusculas e sem acento.</p>
+            </div>
+
+            <div class="coluna__2__area__botao">
+              <button class="coluna__2__botao__criptografar" id="botao-crip">
+                Criptografar
+              </button>
+              <button
+                class="coluna__2__botao__descriptografar"
+                id="botao-descrip"
+              >
+                Descriptografar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="coluna__3">
+          <div id="caixa-texto" class="coluna__3__container">
+            <img
+              class="coluna__3__imagem"
+              src="./assets/foto-menina.svg"
+              alt="imagem-menina"
+            />
+            <p class="coluna__3__titulo">Nenhuma mensagem encontrada</p>
+            <p class="coluna__3__paragrafo">
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </div>
+          <div class="coluna__3__area__botao">
+            <button class="coluna__3__botao" id="botao-copiar">Copiar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="modal" class="coluna__2__modal">
+      <div class="coluna__2__modal__conteudo">
+        <span class="coluna__2__modal__fechar">&times;</span>
+        <p id="modal-text"></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>Desenvolvido por Eliane Orlandin - 2024 &reg;</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
