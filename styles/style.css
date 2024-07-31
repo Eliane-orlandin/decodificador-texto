@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+:root {
+  --cor-primaria: #f3f5fc;
+  --cor-secundaria: #0a3871;
+  --cor-terciaria: #495057;
+  --cor-container: #ffffff;
+  --cor-botao-descrip: #d8dfe8;
+
+  --fonte: "Inter", sans-serif;
+  --fonte-placeholder: 2rem;
+  --fonte-placeholder-cel: 1.3rem;
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +20,7 @@ body {
   height: 100%;
 }
 body {
-  background-color: #f3f5fc;
-  height: auto;
+  background-color: var(--cor-primaria);
 }
 .container {
   display: flex;
@@ -31,61 +41,44 @@ body {
 }
 .coluna__2__area__texto {
   width: 100%;
-  font-family: Inter, sans-serif;
-  font-size: 2rem;
+  font-family: var(--fonte);
+  font-size: var(--fonte-placeholder);
   font-weight: 400;
   text-align: left;
-  background-color: #f3f5fc;
-  color: #0a3871;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
   border: none;
   padding-top: 8rem;
   outline: none;
-  line-height: 48px;
+  line-height: 3rem;
 }
-::-webkit-input-placeholder {
-  color: #0a3871;
-  font-size: 2rem;
-  font-family: "Inter", sans-serif;
-}
-::-moz-placeholder {
-  color: #0a3871;
-  font-size: 2rem;
-  font-family: "Inter", sans-serif;
-  opacity: 1;
-}
-:-ms-input-placeholder {
-  color: #0a3871;
-  font-size: 2rem;
-  font-family: "Inter", sans-serif;
-}
+::placeholder,
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
 ::-ms-input-placeholder {
-  color: #0a3871;
-  font-size: 2rem;
-  font-family: "Inter", sans-serif;
-}
-::placeholder {
-  color: #0a3871;
-  font-size: 2rem;
-  font-family: "Inter", sans-serif;
+  color: var(--cor-secundaria);
+  font-size: var(--fonte-placeholder);
+  font-family: var(--fonte);
 }
 .coluna__2__alerta {
   display: flex;
   flex-direction: row;
   gap: 2%;
   padding-bottom: 0.7rem;
-  font-family: Inter;
+  font-family: var(--fonte);
   font-size: 0.8rem;
-  color: #495057;
+  color: var(--cor-terciaria);
 }
 .coluna__2__area__botao {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 1.8rem;
 }
 .coluna__2__botao__criptografar {
-  background-color: #0a3871;
-  color: white;
-  font-family: Inter;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-container);
+  font-family: var(--fonte);
   font-size: 1rem;
   border-radius: 1.5rem;
   border-style: hidden;
@@ -93,20 +86,59 @@ body {
   height: 4.2rem;
 }
 .coluna__2__botao__criptografar:hover {
-  background-color: #224b7e;
+  opacity: 0.8;
 }
 .coluna__2__botao__descriptografar {
-  background-color: #d8dfe8;
-  color: #0a3871;
-  border: 1px solid #0a3871;
-  font-family: Inter;
+  background-color: var(--cor-botao-descrip);
+  color: var(--cor-secundaria);
+  border: 0.06rem solid var(--cor-secundaria);
+  font-family: var(--fonte);
   font-size: 1rem;
   border-radius: 1.5rem;
   width: 20.5rem;
   height: 4.2rem;
 }
 .coluna__2__botao__descriptografar:hover {
-  background-color: #dde2f4;
+  opacity: 0.6;
+}
+.coluna__2__modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.coluna__2__modal__conteudo {
+  font-family: var(--fonte);
+  color: var(--cor-terciaria);
+  font-size: 1.25rem;
+  background-color: var(--cor-primaria);
+  margin: 15% auto;
+  padding: 2.5rem;
+  border: 0.06rem solid #888;
+  border-radius: 1rem;
+  width: 80%;
+  max-width: 31.2rem;
+  max-width: 50%;
+}
+
+.coluna__2__modal__fechar {
+  color: #aaa;
+  float: right;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.coluna__2__modal__fechar:hover,
+.coluna__2__modal__fechar:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .coluna__3 {
@@ -115,11 +147,10 @@ body {
   padding: 2.5rem 2.5rem 01rem 2.5rem;
   justify-content: space-between;
   flex-direction: column;
-  margin: 20px 30px 0px 0;
-  background-color: #ffffff;
+  margin: 1.25rem 1.8rem 0 0;
+  background-color: var(--cor-container);
   border-radius: 1.5rem;
   box-shadow: 0rem 0.3rem 0.6rem #c7c5c5;
-  /* margin: 10px; */
 }
 .coluna__3__container {
   display: flex;
@@ -127,19 +158,22 @@ body {
   justify-content: center;
   height: 100%;
 }
-
+.coluna__3__imagem {
+  margin-bottom: 2rem;
+}
 .coluna__3__titulo {
-  font-family: Inter, sans-serif;
+  font-family: var(--fonte);
   font-size: 1.6rem;
   font-weight: bold;
-  color: #343a40;
+  color: var(--cor-terciaria);
   text-align: center;
+  margin: 1.5rem;
 }
 .coluna__3__paragrafo {
-  font-family: Inter, sans-serif;
+  font-family: var(--fonte);
   font-size: 1rem;
   font-weight: regular;
-  color: #343a40;
+  color: var(--cor-terciaria);
   margin: 1rem;
   text-align: center;
 }
@@ -149,39 +183,39 @@ body {
 }
 .coluna__3__botao {
   background-color: #ffffff;
-  color: #0a3871;
-  font-family: Inter;
+  color: var(--cor-secundaria);
+  font-family: var(--fonte);
   font-size: 1rem;
-  border: 1px solid #0a3871;
+  border: 0.06rem solid var(--cor-secundaria);
   border-radius: 1.5rem;
   width: 20.5rem;
   height: 4.2rem;
   visibility: hidden;
 }
 .coluna__3__botao:hover {
-  background-color: #dde2f4;
+  opacity: 0.4;
 }
 .coluna__3__texto__exibido {
-  color: #495057;
-  font-family: "Inter", sans-serif;
+  color: var(--cor-terciaria);
+  font-family: var(--fonte);
   font-size: 1.4rem;
   text-align: left;
   font-weight: 400;
-  line-height: 38px;
+  line-height: 2.4rem;
   text-align: left;
   width: 100%;
   height: auto;
   flex: 1;
   overflow-y: auto;
-  max-height: 700px;
-  max-width: 370px;
+  max-height: 43.7rem;
+  max-width: 23.1rem;
 }
 footer {
   display: flex;
   justify-content: center;
-  font-family: Inter;
+  font-family: var(--fonte);
   font-size: 0.8rem;
-  color: #495057;
+  color: var(--cor-terciaria);
   padding: 1rem;
 }
 
@@ -197,7 +231,11 @@ footer {
   }
   .coluna__2__area__texto {
     padding-top: 0;
-    line-height: 40px;
+    line-height: 2.5rem;
+  }
+  .coluna__2__modal__conteudo {
+    font-size: 1rem;
+    max-width: 70%;
   }
   .coluna__3 {
     flex-basis: auto;
@@ -205,12 +243,13 @@ footer {
     width: 43rem;
     height: 18rem;
     margin-top: 0;
-    margin-left: 37px;
+    margin-left: 2rem;
     padding: 1.4rem;
   }
   .coluna__3__container {
     width: 100%;
     height: 100%;
+    justify-content: flex-end;
   }
   .coluna__3__imagem {
     display: none;
@@ -219,11 +258,10 @@ footer {
   .coluna__3__area__botao {
     display: flex;
     justify-content: center;
-    padding-top: 0.5rem;
   }
   .coluna__3__texto__exibido {
     max-height: 9.4rem;
-    max-width: 900px;
+    max-width: 56rem;
     overflow-y: scroll;
     flex: 1;
   }
@@ -235,8 +273,8 @@ footer {
     padding-bottom: 1.5rem;
   }
   .coluna__1__imagem {
-    width: 100px;
-    height: 30px;
+    width: 6.2rem;
+    height: 1.8rem;
   }
   .coluna__2 {
     box-sizing: border-box;
@@ -248,37 +286,23 @@ footer {
   .coluna__2__area__texto {
     max-height: 15.6rem;
     font-size: 1.1rem;
-    line-height: 24px;
+    line-height: 1.5rem;
   }
-  ::-webkit-input-placeholder {
-    color: #0a3871;
-    font-size: 1.3rem;
-    font-family: "Inter", sans-serif;
-  }
-  ::-moz-placeholder {
-    color: #0a3871;
-    font-size: 1.3rem;
-    font-family: "Inter", sans-serif;
-    opacity: 1;
-  }
-  :-ms-input-placeholder {
-    color: #0a3871;
-    font-size: 1.3rem;
-    font-family: "Inter", sans-serif;
-  }
+  ::placeholder,
+  ::-webkit-input-placeholder,
+  ::-moz-placeholder,
+  :-ms-input-placeholder,
   ::-ms-input-placeholder {
-    color: #0a3871;
-    font-size: 1.3rem;
-    font-family: "Inter", sans-serif;
-  }
-  ::placeholder {
-    color: #0a3871;
-    font-size: 1.3rem;
-    font-family: "Inter", sans-serif;
+    color: var(--cor-secundaria);
+    font-size: var(--fonte-placeholder-cel);
+    font-family: var(--fonte);
   }
   .coluna__2__area__botao {
     flex-direction: column;
     gap: 1rem;
+  }
+  .coluna__2__modal__conteudo {
+    font-size: 0.75rem;
   }
   .coluna__2__botao__criptografar {
     width: 18.4rem;
@@ -291,15 +315,17 @@ footer {
   .coluna__3 {
     flex-basis: auto;
     width: 21rem;
-    margin: 1.3rem;
+    margin: var(--fonte-placeholder-cel);
     box-sizing: border-box;
   }
   .coluna__3__container {
     width: 18.1rem;
     align-items: center;
+    justify-content: flex-end;
   }
   .coluna__3__titulo {
     font-size: 1.2rem;
+    margin: 0.6rem;
   }
   .coluna__3__paragrafo {
     font-size: 0.9rem;
@@ -307,7 +333,7 @@ footer {
   .coluna__3__texto__exibido {
     font-size: 1rem;
     overflow: auto scroll;
-    line-height: 24px;
+    line-height: 1.5rem;
   }
   .coluna__3__botao {
     width: 18.4rem;

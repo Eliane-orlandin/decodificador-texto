@@ -18,15 +18,10 @@ function descriptografarMensagem(textoCriptografado) {
     .replace(/ufat/g, "u");
 }
 
-function copiarTextoDoBotao(texto) {
-  navigator.clipboard
-    .writeText(texto)
-    .then(() => {
-      console.log("Texto copiado para a área de transferência!");
-    })
-    .catch((e) => {
-      console.error("Erro ao copiar o texto: ", e);
-    });
+async function copiarTextoDoBotao(texto) {
+  navigator.clipboard.writeText(texto).then(() => {
+    abrirModal("Texto copiado");
+  });
 }
 
 function exibeTexto(texto) {
@@ -40,11 +35,59 @@ function exibeTexto(texto) {
   caixa.appendChild(elementoTexto);
 }
 
+function abrirModal(mensagem) {
+  const modal = document.getElementById("modal");
+  const modalText = document.getElementById("modal-text");
+  modalText.innerText = mensagem;
+  modal.style.display = "block";
+}
+
+function fecharModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  document
+    .querySelector(".coluna__2__modal__fechar")
+    .addEventListener("click", fecharModal);
+});
+
+window.onclick = function (event) {
+  const modal = document.getElementById("modal");
+  if (event.target === modal) {
+    fecharModal();
+  }
+};
+
+function validarTexto(texto) {
+  let caracteresInvalidos = [];
+  for (let i = 0; i < texto.length; i++) {
+    let charCode = texto.charCodeAt(i);
+    if ((charCode < 97 || charCode > 122) && charCode !== 32) {
+      caracteresInvalidos.push(`${texto[i]}`);
+    }
+  }
+  if (caracteresInvalidos.length > 0) {
+    abrirModal(
+      `Caracteres inválidos encontrados: ${caracteresInvalidos.join(
+        ", "
+      )}.\n O texto deve conter apenas letras minúsculas e sem acento.`
+    );
+    return false;
+  }
+  return true;
+}
+
 document.getElementById("botao-crip").addEventListener("click", (evt) => {
   const textarea = document.getElementById("texto");
 
   if (textarea.value === "") {
-    console.error("Texto não foi informado");
+    abrirModal("Texto não foi informado");
+    return;
+  }
+
+  if (!validarTexto(textarea.value)) {
     return;
   }
   const textoCriptografado = criptografarMensagem(textarea.value);
@@ -58,7 +101,10 @@ document.getElementById("botao-descrip").addEventListener("click", (evt) => {
   const textarea = document.getElementById("texto");
 
   if (textarea.value === "") {
-    console.error("Texto não foi informado");
+    abrirModal("Texto não foi informado");
+    return;
+  }
+  if (!validarTexto(textarea.value)) {
     return;
   }
 
@@ -72,11 +118,10 @@ document.getElementById("botao-copiar").addEventListener("click", () => {
   const textoParaCopiar = caixaTexto.innerText;
 
   if (textoParaCopiar === "") {
-    console.error("Não há texto para copiar");
+    abrirModal("Não há texto para copiar");
     return;
   }
 
   copiarTextoDoBotao(textoParaCopiar);
   caixaTexto.innerText = "";
-  // caixaTexto.classList.add("container__direito__texto__mensagem");
 });
