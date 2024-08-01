@@ -111,6 +111,7 @@ document.getElementById("botao-descrip").addEventListener("click", (evt) => {
   const textoDescriptografado = descriptografarMensagem(textarea.value);
   exibeTexto(textoDescriptografado);
   textarea.value = "";
+  document.getElementById("botao-copiar").style.visibility = "visible";
 });
 
 document.getElementById("botao-copiar").addEventListener("click", () => {
