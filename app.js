@@ -64,7 +64,11 @@ function validarTexto(texto) {
   let caracteresInvalidos = [];
   for (let i = 0; i < texto.length; i++) {
     let charCode = texto.charCodeAt(i);
-    if ((charCode < 97 || charCode > 122) && charCode !== 32) {
+    if (
+      (charCode < 97 || charCode > 122) &&
+      (charCode < 1 || charCode > 31) &&
+      charCode !== 32
+    ) {
       caracteresInvalidos.push(`${texto[i]}`);
     }
   }
